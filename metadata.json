@@ -1,18 +1,19 @@
 {
-  "KPackageStructure": "Plasma/LookAndFeel",
-  "KPlugin": {
-    "Authors": [
-      {
-        "Email": "kartik",
-        "Name": "kartik.sindura@gmail.com"
-      }
-    ],
-    "Category": "",
-    "Description": "Fishbowl for Plasma 6",
-    "Id": "fishy",
-    "License": "GPLv2+",
-    "Name": "Fishbowl"
-  },
-  "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
-  "X-Plasma-APIVersion": "2"
+    "KPackageStructure": "Plasma/LookAndFeel/Splash",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "null",
+                "Name": "KartikSindura"
+            }
+        ],
+        "Category": "",
+        "Description": "a fishy splashscreen for Plasma 6,Original repository at https://github.com/KartikSindura/fishy. i love this splashscreen, but that's SC is abadoned for Plasma 5. its experimental migration to plasma 6. if you had anny issue, please touch me at ln8ybrhq7@mozmail.com",
+        "Id": "fishy",
+        "License": "GPLv3",
+        "Name": "Fishy",
+        "Website": "null"
+    },
+    "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
+    "X-Plasma-APIVersion": "2"
 }

@@ -1,6 +1,6 @@
-
 /*
  *   Copyright 2014 Marco Martin <mart@kde.org>
+ *   Modified for Plasma 6 compatibility
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License version 2,
@@ -17,13 +17,14 @@
  *   Free Software Foundation, Inc.,
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-import QtQuick 2.5
-import QtQuick.Window 2.2
+import QtQuick
+import QtQuick.Window
 
 Rectangle {
     id: root
     color: "#010302"
     property int stage
+    property int sizeAnim: 500
 
     onStageChanged: {
         if (stage == 1) {
@@ -49,33 +50,29 @@ Rectangle {
         }
 
         Rectangle {
-
-        property int sizeAnim: 500
-
-        id: imageSource
-        width:  sizeAnim
-        height: sizeAnim
-        color:  "transparent"
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenter: parent.verticalCenter
-        clip: true;
-
-        AnimatedImage {
-            id: face
-            source: "images/fish.gif"
-            paused: false
+            id: imageSource
+            width: sizeAnim
+            height: sizeAnim
+            color: "transparent"
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
-            width:  imageSource.sizeAnim - 2
-            height: imageSource.sizeAnim - 2
-            smooth: true
-            visible: true
-         }
-    }
+            clip: true
 
-       Image {
+            AnimatedImage {
+                id: face
+                source: "images/fish.gif"
+                paused: false
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.verticalCenter: parent.verticalCenter
+                width: sizeAnim
+                height: sizeAnim
+                smooth: true
+                visible: true
+            }
+        }
+
+        Image {
             id: busyIndicator
-            //in the middle of the remaining space
             y: parent.height - 200
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.margins: units.gridUnit
@@ -95,11 +92,9 @@ Rectangle {
             spacing: units.smallSpacing*3
             anchors {
                 bottom: parent.bottom
-                // right: parent.right
                 margins: units.gridUnit
             }
             anchors.horizontalCenter: parent.horizontalCenter
-
         }
     }
 
