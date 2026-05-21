@@ -2,3 +2,6 @@
 # Claude Code local config - DO NOT COMMIT
 CLAUDE.md
 .claude/
+
+# Build artifacts
+*.tar.gz
