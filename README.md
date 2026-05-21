@@ -25,8 +25,18 @@ The "Fishy" splash screen features a cute animated fish swimming across your scr
 ### KDE Store
 This splash screen will be available on the KDE Store soon!
 
+## Packaging for the KDE Store
+
+To rebuild the upload archive:
+
+```bash
+./scripts/package.sh
+```
+
+This produces `fishy-plasma6.tar.gz` with a flat structure. Upload that archive directly to store.kde.org — do not wrap it in an additional parent folder, or KNewStuff will install it to a nested path (see issue #3).
+
 ## License
-This splash screen is licensed under the GNU General Public License v3.0 (GPL-3.0), the same license as the original work. See the LICENSE file for more details.
+This splash screen is licensed under the GNU General Public License v2 or later (GPLv2+), the same license as the original work. See the LICENSE file for more details.
 
 ## Credits
 
